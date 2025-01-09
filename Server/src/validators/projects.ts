@@ -1,6 +1,5 @@
 import { UploadedFile } from "express-fileupload";
 import { body } from "express-validator";
-import { remove } from "fs-extra";
 
 const allowedTypes = ['Web', 'Desktop', 'Movil'];
 
