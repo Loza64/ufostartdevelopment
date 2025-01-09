@@ -1,0 +1,60 @@
+.seccion-tecnologies{
+    text-align: center;
+    padding: 45px 10px;
+
+    .title{
+        color: red;
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 40px 0;
+            .icon{
+                transition: all .3s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 70px;
+                margin: 0 30px;
+                .icon-title{
+                    font-weight: 900;
+                    font-size: 16px;
+                    color:white;
+                }
+            }
+        }
+
+        @media only screen and (max-width:850px) {
+            .title{
+                font-size: 28px;
+            }
+            .list{
+                gap: 2rem;
+                .icon{
+                    font-size: 50px;
+                    margin: 0 10px;
+                    .icon-title{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width:363px){
+            .list{
+                .icon{
+                    margin: 0 6px;
+                    .icon-title{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+}

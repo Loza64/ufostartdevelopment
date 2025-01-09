@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    // Especifica el sistema de módulos a utilizar (CommonJS es el más común en Node.js)  
+    "module": "CommonJS",
+    // Define la versión de ECMAScript que se utilizará como objetivo al compilar el código  
+    "target": "esnext",
+    // Genera un archivo de mapa de origen para facilitar la depuración del código  
+    "sourceMap": true,
+    // Define la carpeta de salida donde se generará el código compilado  
+    "outDir": "build",
+    // Especifica el directorio raíz para el código fuente  
+    "rootDir": "src",
+    // Permite la interoperabilidad entre módulos CommonJS y ESModules
+    "esModuleInterop": true
+  },
+  // Indica qué archivos deben incluirse en la compilación (en este caso, dentro de la carpeta src)  
+  "include": ["src/**/*.ts"]
+}

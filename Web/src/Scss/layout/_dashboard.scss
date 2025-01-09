@@ -1,0 +1,201 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .icono {
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .titulo {
+        font-size: 25px;
+        font-weight: 900;
+    }
+}
+
+.menu {
+    #btn-menu {
+        font-size: 24px;
+        background-color: red;
+        padding: 3px 6px;
+        border-radius: 4px;
+        transition: all 0.01s ease-in-out;
+
+        &:active {
+            background-color: darkred;
+        }
+    }
+}
+
+@media only screen and (max-width:1150px) {
+    .labelnone {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .logo {
+        .titulo {
+            font-size: 25px;
+        }
+    }
+}
+
+.header-dashboard {
+    width: 100%;
+    height: 100vh;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(140deg, black 50%, red 100%);
+    gap: 40px;
+    overflow: hidden;
+
+    h1 {
+        font-size: 40px;
+        color: white;
+        font-weight: 900;
+        transition: all .5s ease-in-out;
+        animation-name: h1_animated;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+    }
+
+    @keyframes h1_animated {
+        0% {
+            transform: translateY(-40%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+
+    p {
+        color: white;
+        font-weight: 900;
+        transition: all .5s ease-in-out;
+        animation-name: p_animated;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+    }
+
+    @keyframes p_animated {
+        0% {
+            transform: translateY(20px) scale(0);
+            opacity: 0;
+        }
+
+        60% {
+            transform: translateY(-10px) scale(1.1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+    .btn-link {
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+        border: solid white 3px;
+        padding: 10px 25px;
+        border-radius: 10px;
+        transition: all .3s ease;
+        animation-name: btn_animated;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+
+        &:hover {
+            color: red;
+            border: solid red 3px;
+        }
+    }
+
+    @keyframes btn_animated {
+        0% {
+            transform: translateX(-40%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+
+    .btn-scroll {
+        color: white;
+        font-weight: 800;
+        font-size: 40px;
+        transition: all .3s ease-in-out;
+        animation-name: animation_scroll;
+        animation-iteration-count: infinite;
+        animation-duration: 1.4s;
+    }
+
+    @keyframes animation_scroll {
+        0% {
+            transform: translateY(0%);
+        }
+
+        50% {
+            transform: translateY(60%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @media only screen and (max-width:830px) {
+        h1 {
+            font-size: 35px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        .btn-link {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (max-width:580px) {
+gap:20px;
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    @media only screen and (max-width:385px) {
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        .btn-link {
+            font-size: 13px;
+        }
+    }
+}
