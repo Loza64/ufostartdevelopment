@@ -5,16 +5,15 @@ import BodyParser from 'body-parser';
 import rateLimit from 'express-rate-limit';
 import fileUpload from 'express-fileupload';
 import Routes from './router/routes';
-import { Cors, HelmetConfig, LimiterConfig } from './config';
+import { CorsConfig, HelmetSettings, LimiterConfig } from './config';
 import GetConnection from './connection/database';
 
 const Application = express();
 
 GetConnection()
-
 Application.use(morgan('dev'))
-Application.use(cors(Cors))
-Application.use(HelmetConfig)
+Application.use(HelmetSettings)
+Application.use(cors(CorsConfig))
 Application.disable('x-powered-by')
 Application.use(rateLimit(LimiterConfig))
 Application.use(BodyParser.json({ limit: "100mb" }))

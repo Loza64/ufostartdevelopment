@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LimiterConfig = exports.HelmetConfig = exports.Cors = exports.Origin = exports.MailNotification = exports.MailPass = exports.MailBussiness = exports.ApiSecret = exports.CloudName = exports.ApiKey = exports.PORT = exports.ConnectionDB = exports.Email = exports.Server = exports.Session = exports.Database = exports.Error = exports.Success = void 0;
+exports.LimiterConfig = exports.HelmetSettings = exports.CorsConfig = exports.Origin = exports.MailNotification = exports.MailPass = exports.MailBussiness = exports.ApiSecret = exports.CloudName = exports.ApiKey = exports.PORT = exports.ConnectionDB = exports.Email = exports.Server = exports.Session = exports.Database = exports.Error = exports.Success = void 0;
 const debug_1 = __importDefault(require("debug"));
 const config_1 = __importDefault(require("dotenv/config"));
 const helmet_1 = __importDefault(require("helmet"));
@@ -23,8 +23,8 @@ exports.MailBussiness = process.env.MAILBUSINESS;
 exports.MailPass = process.env.MAILPASS;
 exports.MailNotification = process.env.MAILNOTIFICATION;
 exports.Origin = process.env.ORIGIN;
-exports.Cors = { origin: exports.Origin, methods: ['GET', 'POST'], allowedHeaders: ['Content-Type'] };
-exports.HelmetConfig = (0, helmet_1.default)({
+exports.CorsConfig = { origin: exports.Origin, methods: ['GET', 'POST'], allowedHeaders: ['Content-Type'] };
+exports.HelmetSettings = (0, helmet_1.default)({
     xssFilter: true, // Habilitar protección contra XSS  
     hsts: {
         maxAge: 31536000,

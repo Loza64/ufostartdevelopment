@@ -22,9 +22,9 @@ export const MailNotification = process.env.MAILNOTIFICATION;
 export const Origin = process.env.ORIGIN;
 
 
-export const Cors = { origin: Origin, methods: ['GET', 'POST'], allowedHeaders: ['Content-Type'] }
+export const CorsConfig = { origin: Origin, methods: ['GET', 'POST'], allowedHeaders: ['Content-Type'] }
 
-export const HelmetConfig = helmet({
+export const HelmetSettings = helmet({
     xssFilter: true, // Habilitar protección contra XSS  
     hsts: {
         maxAge: 31536000,
