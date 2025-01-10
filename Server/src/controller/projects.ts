@@ -25,7 +25,7 @@ export const NewProject = async (req: Request, res: Response) => {
             res.status(500).json({ state: false, details: "Error al subir el proyecto" });
             return
         }
-        res.status(200).json({ state: false, details: "Project sucess uploaded." });
+        res.status(200).json({ state: true, details: "Project sucess uploaded." });
     } catch (error) {
         res.status(500).json({ state: false, details: error.message });
     } finally {
@@ -44,7 +44,7 @@ export const DetailProject = async (req: Request, res: Response) => {
             res.status(500).json({ state: false, details: "Error al agregar el detalle al proyecto" })
             return
         }
-        res.status(200).json({ state: false, details: "Detail project sucess uploaded." });
+        res.status(200).json({ state: true, details: "Detail project sucess uploaded." });
     } catch (error) {
         res.status(500).json({ state: false, details: error.message });
     }

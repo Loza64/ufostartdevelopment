@@ -11,14 +11,12 @@ interface ValidationError {
     location: string;
 }
 
-export const validate = (req: Request, res: Response, next: NextFunction) => {
-    const validator = validationResult(req);
+export const validate = async (req: Request, res: Response, next: NextFunction) => {
 
-    const file = req.files?.photo as UploadedFile
-    if (file) remove(file.tempFilePath)
+    const validator = validationResult(req);
+    const files = req.files?.photo as UploadedFile | UploadedFile[];
 
     if (!validator.isEmpty()) {
-
         const errors = validator.array() as ValidationError[];
 
         let data: Record<string, string> = errors.reduce((acc: Record<string, string>, error) => {
@@ -26,8 +24,27 @@ export const validate = (req: Request, res: Response, next: NextFunction) => {
             return acc;
         }, {});
 
-        res.status(400).json({ status: "error", message: "Errores de validación de entrada", data });
+        if (files && Array.isArray(files)) {
+            files.map(item => {
+                if (item && item.tempFilePath) {
+                    try {
+                        remove(item.tempFilePath);
+                    } catch (err) {
+                        console.error(`Error al eliminar el archivo ${item.tempFilePath}:`, err);
+                    }
+                }
+            })
+        } 
+        
+        if (files && !Array.isArray(files)) {
+            try {
+                remove(files.tempFilePath);
+            } catch (err) {
+                console.error(`Error al eliminar el archivo ${files.tempFilePath}:`, err);
+            }
+        }
 
+        res.status(400).json({ status: "error", message: "Errores de validación de entrada", data });
         Error(data);
         return;
     }
