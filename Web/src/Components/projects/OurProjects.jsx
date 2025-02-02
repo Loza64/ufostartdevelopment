@@ -6,7 +6,7 @@ export default function OurProjects() {
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "instant",
     });
   }
 
