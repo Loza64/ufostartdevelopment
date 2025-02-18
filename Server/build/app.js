@@ -22,7 +22,7 @@ Application.use((0, express_rate_limit_1.default)(config_1.LimiterConfig));
 Application.use(body_parser_1.default.json({ limit: "100mb" }));
 Application.use(body_parser_1.default.urlencoded({ limit: "100mb", extended: true }));
 Application.use((0, express_fileupload_1.default)({ useTempFiles: true, tempFileDir: './Upload' }));
-Application.use('/backend/api/rest/ufostartserver/route/fetch/axios', routes_1.default);
+Application.use('/backend/api/rest/ufostart/server/route/fetch/axios', routes_1.default);
 Application.get('/favicon.ico', (req, res) => { res.status(204).end(); });
 exports.default = Application;
 //# sourceMappingURL=app.js.map
