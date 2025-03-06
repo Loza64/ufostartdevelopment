@@ -46,8 +46,8 @@ export default function Navbar() {
     }
   ]
 
-  const location = useLocation();
-  const { pathname } = location;
+  const { pathname } = useLocation();
+
 
   return (
     <NavbarContainer statenavbar={HeightNavBar}>
