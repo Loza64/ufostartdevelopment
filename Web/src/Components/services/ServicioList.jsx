@@ -69,17 +69,22 @@ export default function ServicioList({ Title, items }) {
     const article = document.querySelectorAll(".services .list article");
 
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(({ target, isIntersecting }) => {
-        if (isIntersecting) {
-          setTimeout(() => {
+      entries.forEach(
+        ({ target, isIntersecting }) => {
+          if (isIntersecting) {
             target.style.transform = "translateX(0%)"
             target.style.opacity = "1"
-          }, 1000)
-        } else {
-          target.style.transform = "translateX(-20%)"
-          target.style.opacity = "0"
+          } else {
+            target.style.transform = "translateX(-20%)"
+            target.style.opacity = "0"
+          }
+        },
+        {
+          root: null,
+          rootMargin: '1px',
+          threshold: 1
         }
-      })
+      )
     })
 
     article.forEach(item => {

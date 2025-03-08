@@ -12,17 +12,17 @@ export default function ProjectList() {
 
     const observer = new IntersectionObserver(entries => {
 
-      entries.forEach(({ isIntersecting, target }) => {
+      entries.forEach(
+        ({ isIntersecting, target }) => {
 
-        const title = target.querySelector('.title-project');
-        const image_project = target.querySelector('.image_project')
-        const subtitle_project = target.querySelector('.subtitle-project')
-        const p = target.querySelector('p')
-        const button = target.querySelector("button")
-        const isProjectItem = target.classList.contains('project-item')
+          const title = target.querySelector('.title-project');
+          const image_project = target.querySelector('.image_project')
+          const subtitle_project = target.querySelector('.subtitle-project')
+          const p = target.querySelector('p')
+          const button = target.querySelector("button")
+          const isProjectItem = target.classList.contains('project-item')
 
-        if (isIntersecting) {
-          setTimeout(() => {
+          if (isIntersecting) {
             target.style.background = "rgb(24, 24, 24)"
             title.style.opacity = 1
             title.style.transform = "translateY(0%)"
@@ -34,21 +34,26 @@ export default function ProjectList() {
             p.style.transform = "translateY(0%)"
             button.style.opacity = 1;
             button.style.transform = "translateY(0%)"
-          }, 1000);
-        } else {
-          target.style.background = "transparent"
-          title.style.opacity = 0
-          title.style.transform = "translateY(-50%)"
-          image_project.style.opacity = 0;
-          image_project.style.transform = `${isProjectItem ? "translateX(-100%)" : "translateX(100%)"}`
-          image_project.style.animation = '';
-          subtitle_project.style.transform = "scale(0)"
-          p.style.opacity = 0;
-          p.style.transform = "translateY(20%)"
-          button.style.opacity = 0;
-          button.style.transform = "translateY(100%)"
+          } else {
+            target.style.background = "transparent"
+            title.style.opacity = 0
+            title.style.transform = "translateY(-50%)"
+            image_project.style.opacity = 0;
+            image_project.style.transform = `${isProjectItem ? "translateX(-100%)" : "translateX(100%)"}`
+            image_project.style.animation = '';
+            subtitle_project.style.transform = "scale(0)"
+            p.style.opacity = 0;
+            p.style.transform = "translateY(20%)"
+            button.style.opacity = 0;
+            button.style.transform = "translateY(100%)"
+          }
+        },
+        {
+          root: null,
+          rootMargin: '1px',
+          threshold: 1
         }
-      });
+      );
     });
 
     projectItems.forEach(item => {
