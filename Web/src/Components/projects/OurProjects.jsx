@@ -13,15 +13,15 @@ export default function OurProjects() {
   useEffect(() => {
     const our_projects = document.querySelector(".our_projects")
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(({ target, isIntersecting }) => {
+      entries.forEach(
+        ({ target, isIntersecting }) => {
 
-        const img = target.querySelector("img");
-        const h2 = target.querySelector(".content h2");
-        const p = target.querySelector(".content p");
-        const button_projects = target.querySelector(".content .button-projects");
+          const img = target.querySelector("img");
+          const h2 = target.querySelector(".content h2");
+          const p = target.querySelector(".content p");
+          const button_projects = target.querySelector(".content .button-projects");
 
-        if (isIntersecting) {
-          setTimeout(() => {
+          if (isIntersecting) {
             img.style.transform = "scale(1)"
 
             h2.style.opacity = "1"
@@ -32,20 +32,25 @@ export default function OurProjects() {
 
             button_projects.style.transform = "scale(1)"
             button_projects.style.opacity = "1";
-          }, 1000)
-        } else {
-          img.style.transform = "scale(0)"
+          } else {
+            img.style.transform = "scale(0)"
 
-          h2.style.opacity = "0"
-          h2.style.transform = "translateY(-40%)"
+            h2.style.opacity = "0"
+            h2.style.transform = "translateY(-40%)"
 
-          p.style.opacity = "0"
-          p.style.transform = "translateX(40%)"
+            p.style.opacity = "0"
+            p.style.transform = "translateX(40%)"
 
-          button_projects.style.transform = "scale(0)"
-          button_projects.style.opacity = "0";
+            button_projects.style.transform = "scale(0)"
+            button_projects.style.opacity = "0";
+          }
+        },
+        {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.9
         }
-      })
+      )
     })
 
     observer.observe(our_projects)

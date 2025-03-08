@@ -68,24 +68,26 @@ export default function ServicioList({ Title, items }) {
   useEffect(() => {
     const article = document.querySelectorAll(".services .list article");
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(
-        ({ target, isIntersecting }) => {
-          if (isIntersecting) {
-            target.style.transform = "translateX(0%)"
-            target.style.opacity = "1"
-          } else {
-            target.style.transform = "translateX(-20%)"
-            target.style.opacity = "0"
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(
+          ({ target, isIntersecting }) => {
+            if (isIntersecting) {
+              target.style.transform = "translateX(0%)"
+              target.style.opacity = "1"
+            } else {
+              target.style.transform = "translateX(-20%)"
+              target.style.opacity = "0"
+            }
           }
-        },
-        {
-          root: null,
-          rootMargin: '1px',
-          threshold: 1
-        }
-      )
-    })
+        )
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.9
+      }
+    )
 
     article.forEach(item => {
       observer.observe(item)

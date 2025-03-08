@@ -75,8 +75,8 @@ export default function AboutUs({ Title, items }) {
         },
         {
           root: null,
-          rootMargin: '1px',
-          threshold: 1
+          rootMargin: '0px',
+          threshold: 0.9
         }
       )
     })
