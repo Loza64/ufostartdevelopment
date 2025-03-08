@@ -20,15 +20,13 @@ export default function Banner() {
           const h3 = target.querySelector("h3");
           const btn_link = target.querySelector(".btn-link");
           if (isIntersecting) {
-            setTimeout(() => {
-              h2.style.opacity = "1";
-              h2.style.transform = "translateY(0%)"
+            h2.style.opacity = "1";
+            h2.style.transform = "translateY(0%)"
 
-              h3.style.opacity = "1";
-              h3.style.transform = "scale(1)"
+            h3.style.opacity = "1";
+            h3.style.transform = "scale(1)"
 
-              btn_link.style.transform = "rotateY(0deg)"
-            }, 1000)
+            btn_link.style.transform = "rotateY(0deg)"
           } else {
             h2.style.opacity = "0";
             h2.style.transform = "translateY(-50%)"
