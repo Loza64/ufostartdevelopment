@@ -39,17 +39,16 @@ export default function Lenguajes({ title }) {
     const icons = document.querySelectorAll(".icon");
 
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(({ isIntersecting, target }) => {
-        if (isIntersecting) {
-          setTimeout(() => {
+      entries.forEach(
+        ({ isIntersecting, target }) => {
+          if (isIntersecting) {
             target.style.transform = "translateY(0%)"
             target.style.opacity = "1";
-          }, 500);
-        } else {
-          target.style.transform = "translateY(-15%)"
-          target.style.opacity = "0";
-        }
-      },
+          } else {
+            target.style.transform = "translateY(-15%)"
+            target.style.opacity = "0";
+          }
+        },
         {
           root: null,
           rootMargin: '0px',
