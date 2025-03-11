@@ -11,7 +11,7 @@
         width: 100%;
         max-width: 450px;
         border-radius: 10px;
-        transition: all 1s ease-in-out;
+        transition: all 1.5s ease-in-out;
         animation-name: animate_shadow;
         animation-duration: 1s;
         animation-iteration-count: infinite;
@@ -38,13 +38,13 @@
         gap: 5px;
 
         h2 {
-            transition: all .3s ease-in-out;
+            transition: all 1s ease-in-out;
             font-weight: 600;
             color: white;
         }
 
         p {
-            transition: all .3s ease-in-out;
+            transition: all 1s ease-in-out;
             text-align: justify;
             color: white;
         }
@@ -57,7 +57,7 @@
             border: solid red 3px;
             padding: 10px 25px;
             border-radius: 5px;
-            transition: all .5s ease;
+            transition: all 1s ease;
             width: auto;
             max-width: 200px;
             text-align: center;

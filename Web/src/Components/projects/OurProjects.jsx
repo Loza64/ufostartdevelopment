@@ -12,6 +12,7 @@ export default function OurProjects() {
 
   useEffect(() => {
     const our_projects = document.querySelector(".our_projects")
+
     const observer = new IntersectionObserver(entries => {
       entries.forEach(
         ({ target, isIntersecting }) => {
@@ -47,8 +48,8 @@ export default function OurProjects() {
         },
         {
           root: null,
-          rootMargin: '0px',
-          threshold: 0.9
+          rootMargin: '0px 0px -100% 0px',
+          threshold: [0.5, 1.0]
         }
       )
     })
