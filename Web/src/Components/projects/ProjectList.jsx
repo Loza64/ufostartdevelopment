@@ -50,8 +50,8 @@ export default function ProjectList() {
         },
         {
           root: null,
-          rootMargin: '0px',
-          threshold: 0.9
+          rootMargin: '0px 0px -100% 0px',
+          threshold: [0.5, 1.0]
         }
       );
     });
