@@ -84,7 +84,7 @@ export default function ServicioList({ Title, items }) {
       },
       {
         root: null,
-        rootMargin: '0px 0px -100% 0px',
+        rootMargin: '0%',
         threshold: [0.5, 1.0]
       }
     )
