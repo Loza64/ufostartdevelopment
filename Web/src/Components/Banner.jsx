@@ -39,8 +39,8 @@ export default function Banner() {
         },
         {
           root: null,
-          rootMargin: '0px',
-          threshold: 0.2
+          rootMargin: '0%',
+          threshold: [0.5, 1.0]
         })
 
     })
