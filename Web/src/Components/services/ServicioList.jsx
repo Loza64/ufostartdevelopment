@@ -49,7 +49,7 @@ export default function ServicioList({ Title, items }) {
     },
     {
       icon: <IoSettingsSharp className='f_icon' />,
-      title: "Desarrollo de Software a Medida",
+      title: "Desarrollo a Medida",
       description: "Creamos soluciones personalizadas que se adaptan plenamente a los requerimientos específicos de tu negocio en todos los niveles."
     }
   ]
