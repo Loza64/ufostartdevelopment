@@ -15,7 +15,7 @@ export default function ServicioList({ Title, items }) {
     {
       icon: <SiWebmoney className="f_icon" />,
       title: "Desarrollo web",
-      description: "Creamos aplicaciones web excepcionales y dinámicas. Nuestras soluciones son eficientes y optimizadas, asegurando una mejor experiencia de usuario para tus clientes."
+      description: "Creamos aplicaciones web dinámicas. Nuestras soluciones son eficientes y optimizadas, asegurando una mejor experiencia de usuario para tus clientes."
     },
     {
       icon: <FaShoppingCart className='f_icon' />,
