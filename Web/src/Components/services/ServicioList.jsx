@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
-import { FaCodeBranch, FaComments, FaDesktop, FaLink, FaSearch, FaShoppingCart, FaTools } from "react-icons/fa";
+import { FaCodeBranch, FaComments, FaLink, FaSearch, FaShoppingCart, FaTools } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
-import { MdOutlineTabletAndroid } from "react-icons/md";
 import { SiWebmoney } from "react-icons/si";
 
 ServicioList.propTypes = {
@@ -17,16 +16,6 @@ export default function ServicioList({ Title, items }) {
       icon: <SiWebmoney className="f_icon" />,
       title: "Desarrollo web",
       description: "Creamos aplicaciones web excepcionales y dinámicas. Nuestras soluciones son eficientes y optimizadas, asegurando una mejor experiencia de usuario para tus clientes."
-    },
-    {
-      icon: <MdOutlineTabletAndroid className="f_icon" />,
-      title: "Desarrollo móvil",
-      description: "Desarrollamos aplicaciones móviles atractivas y seguras para Android y multiplataforma, optimizando constantemente la experiencia del usuario."
-    },
-    {
-      icon: <FaDesktop className="f_icon" />,
-      title: "Desarrollo de escritorio",
-      description: "Creamos aplicaciones de escritorio eficientes, aplicando patrones de diseño efectivos para lograr un alto rendimiento seguridad y buena interaccion con el usuario."
     },
     {
       icon: <FaShoppingCart className='f_icon' />,
