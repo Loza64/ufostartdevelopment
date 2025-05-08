@@ -24,7 +24,7 @@ const Message = async (req, res, next) => {
                 html: `
                     <p>
                     Un nuevo cliente identificado como: ${data.name} se a contactado atravez de tu pagina web 
-                    <a href='https://ufostartdevelopment.herokuapp.com/'>UFOSTART DEVELOPMENT</a> con el correo: ${data.email}, 
+                    <a href='https://ufostartdevelopment.vercel.app/'>UFOSTART DEVELOPMENT</a> con el correo: ${data.email}, 
                     la clave de identificacion del cliente es: <label style='color:red; font-weight: 900;'>${data.key} </label>, 
                     el mensaje dice lo siguiente:
                     </p>
