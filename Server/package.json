@@ -44,7 +44,7 @@
     "helmet": "^8.0.0",
     "http": "^0.0.1-security",
     "mongoose": "^8.9.3",
-    "nodemailer": "^6.9.16",
+    "nodemailer": "^7.0.7",
     "nodemailer-smtp-transport": "^2.7.4",
     "uniquid": "^1.1.4"
   }
